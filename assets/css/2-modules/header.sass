@@ -1,0 +1,173 @@
+.main-header
+	background: $primary-color
+	+linear-gradient(164deg,$primary-color -14%, $accent-color 106%)
+	margin: 0
+	padding: 15px
+	height: 667px
+	+clearfix
+
+	
+.header-wrap
+	// border: 1px solid #444
+	background-image: url('../img/header/landscape.png')
+	background-repeat: no-repeat
+	background-position: 10% 100%
+	background-size: 95%
+
+	height: 100%
+	max-width: 1300px
+	width: 100%
+	margin: 0 auto
+
+
+
+
+
+
+
+
+// Logo
+
+.logo h1
+	float: left
+	display: block
+	font-family: $secondary-font
+	color: white
+	padding: 0
+	margin: 48px 0
+
+
+
+
+
+
+
+
+// Main Navigation
+
+
+nav.main-nav
+	float: right
+	margin-top: 65px
+
+	a
+		font-family: $primary-font
+		letter-spacing: $nav-letter-space
+		color: $text-color
+		font-size: $nav-font-size
+		display: inline-block
+		margin-left: 80px
+		+filter(drop-shadow(2px 2px 1px #a83329))
+
+	a:hover
+		color: #a83329
+
+
+
+
+
+
+
+
+// Mobile Navigation & Toggle
+
+
+nav.mobile-nav
+	display: none
+	background: white
+
+	a
+		font-family: $primary-font
+		display: inline-block
+		letter-spacing: $nav-letter-space
+		font-size: $nav-font-size
+
+
+.mobile-nav-toggle
+	float: right
+	// background: blue
+	height: 50px
+	width: 50px
+	margin: 65px 45px 0 
+	display: none
+	align-items: center
+
+	span,
+	span:before,
+	span:after
+		position: relative
+		content: ""
+		display: block
+		height: 2px
+		width: 100%
+		background: $text-color
+		cursor: pointer
+
+		transition: all 0.3s ease-in-out
+
+	span:before
+		top: 15px
+	span:after
+		top: -17px
+
+	&.is-open span
+		background: transparent
+		transform: rotate(-180deg)
+
+	&.is-open span:before,
+	&.is-open span:after
+		transform-origin: center
+		transform: rotate(45deg)
+		top: 0
+	&.is-open  span:after
+		transform: rotate(-45deg)
+
+@media (max-width: 950px)
+	.main-header
+		height: 457px
+
+	.logo h1
+		margin: 40px 0 0 0
+		font-size: 4em
+
+	nav.main-nav
+		display: none
+
+	.mobile-nav-toggle
+		display: flex	
+
+
+	nav.mobile-nav.is-open
+		display: block
+
+
+
+// Media Queries
+
+@media (max-width: 736px)
+	.main-header
+		height: 300px
+
+	.logo h1
+		margin: 0
+		font-size: 4em
+
+	.mobile-nav-toggle
+		margin: 0
+
+
+@media (max-width: 400px)
+	.main-header
+		height: 275px
+
+	.header-wrap
+		background-position: 10% 100%
+
+
+
+
+
+
+
+
+
