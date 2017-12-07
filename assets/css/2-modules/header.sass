@@ -73,14 +73,20 @@ nav.main-nav
 
 
 nav.mobile-nav
+	padding: 0 40px
 	display: none
 	background: white
+	transform: translateY(-48px)
+	transition: all .2s ease-in-out
+	justify-content: space-between
 
 	a
 		font-family: $primary-font
 		display: inline-block
 		letter-spacing: $nav-letter-space
 		font-size: $nav-font-size
+		padding: 10px 0
+
 
 
 .mobile-nav-toggle
@@ -91,6 +97,7 @@ nav.mobile-nav
 	margin: 65px 45px 0 
 	display: none
 	align-items: center
+	cursor: pointer
 
 	span,
 	span:before,
@@ -101,7 +108,6 @@ nav.mobile-nav
 		height: 2px
 		width: 100%
 		background: $text-color
-		cursor: pointer
 
 		transition: all 0.3s ease-in-out
 
@@ -122,6 +128,8 @@ nav.mobile-nav
 	&.is-open  span:after
 		transform: rotate(-45deg)
 
+
+
 @media (max-width: 950px)
 	.main-header
 		height: 457px
@@ -138,7 +146,8 @@ nav.mobile-nav
 
 
 	nav.mobile-nav.is-open
-		display: block
+		display: flex
+		transform: translateY(0)
 
 
 
