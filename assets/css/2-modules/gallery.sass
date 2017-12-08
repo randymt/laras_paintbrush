@@ -1,2 +1,40 @@
-h1
-	color: pink
+.gallery
+	display: block
+	background: green
+	width: 100%
+
+
+
+// Gallery Stage
+
+.gallery-stage
+	background-image: url('../img/gallery/gallery_wood_bg.jpg')
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 830px
+
+	.secondary-title
+		@include secondary-title-base
+
+		h1
+			@include secondary-title-h1
+
+		:before
+			@include secondary-title-before
+
+		:after
+			@include secondary-title-after
+
+
+
+	
+
+
+
+
+// Gallery Thumbnails
+
+.gallery-thumb-wrap
+	background: lightblue
+	height: 955px
