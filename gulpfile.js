@@ -67,6 +67,14 @@ gulp.task('sass', function () {
 * Autoprefixer
 */
 
+gulp.task('autoprefix', function() {
+   return gulp.src('_site/assets/css')
+      .pipe(prefix({
+         browsers: ['last 2 versions']
+      }))
+      .pipe(gulp.dest('_site/assets/css'))
+
+});
 
 
 /*

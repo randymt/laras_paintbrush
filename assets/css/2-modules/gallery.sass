@@ -1,6 +1,6 @@
 .gallery
 	display: block
-	background: green
+	// background: green
 	width: 100%
 
 
@@ -12,29 +12,104 @@
 	background-position: center center
 	background-repeat: no-repeat
 	background-size: cover
-	height: 830px
+	padding: 50px 15px 0 15px
 
-	.secondary-title
-		@include secondary-title-base
+	.gallery-stage-wrap
+		// background: red
+		max-width: 1300px
+		margin: 0 auto
 
-		h1
-			@include secondary-title-h1
+		.secondary-title
+			@include primary-title-base
+			padding-left: 65px
 
-		:before
-			@include secondary-title-before
+			h1
+				@include secondary-title-h1
 
-		:after
-			@include secondary-title-after
+			.secondary-left-squiggle, .secondary-right-squiggle
+				fill: $secondary-squiggles
 
 
+		.close-gallery
+			float: right
+			background: lightblue
+			height: 50px
+			width: 50px
 
 	
+		.painting-slider
+			display: flex
+			justify-content: space-between
+			align-items: center
+			// background: salmon
+			// height: 830px
+			min-width: 80%
+			max-width: 800px
+			margin: 0 auto
+			
+			.left-arrow
+				background: blue
+				width: 53px
+				height: 60px
 
+			.painting-full
+			.right-arrow
+				background: blue
+				width: 53px
+				height: 60px
+		
+		.painting-info
+			display: flex
+			align-items: center
+			flex-direction: column
+			padding-bottom: 45px
 
+			h3
+				// background: pink
+				color: $text-color
+				font-family: $primary-font
+				font-weight: 600
+				font-size: 56px
+				text-transform: uppercase
+				margin: 0
+				padding: 0
+				border-bottom: 2px solid $text-color
+
+			h4
+				// background: pink
+				color: $text-color
+				font-family: $primary-font
+				font-weight: 400
+				font-size: 38px
+				letter-spacing: 2px
+				text-transform: uppercase
+
+				margin: 0
+				padding: 0
 
 
 // Gallery Thumbnails
 
 .gallery-thumb-wrap
-	background: lightblue
+	// background: lightblue
 	height: 955px
+	padding: 50px 15px 0 15px
+
+
+
+	.primary-title
+		@include primary-title-base
+
+		h1
+			@include primary-title-h1
+
+	
+	
+	.primary-left-squiggle, .primary-right-squiggle
+		fill: $primary-squiggles
+
+
+
+
+
+

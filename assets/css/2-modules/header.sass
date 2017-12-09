@@ -1,6 +1,6 @@
 .main-header
 	background: $primary-color
-	+linear-gradient(164deg,$primary-color -14%, $accent-color 106%)
+	background: linear-gradient(164deg, $primary-color -14%, $accent-color 106%)
 	margin: 0
 	padding: 15px
 	height: 667px
@@ -36,7 +36,7 @@
 	padding: 0
 	margin: 48px 0
 	transition: all 0.2s ease-in-out
-	+filter(drop-shadow(2px 2px 1px #a83329))
+	filter: drop-shadow(2px 2px 1px #a83329)
 
 	&:hover
 		opacity: .75
@@ -64,7 +64,7 @@ nav.main-nav
 		letter-spacing: $nav-letter-space
 		color: $text-color
 		font-size: $nav-font-size
-		+filter(drop-shadow(2px 2px 1px #a83329))
+		filter: drop-shadow(2px 2px 1px #a83329)
 		transition: all .25s ease
 
 		&:hover
