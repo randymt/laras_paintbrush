@@ -1,114 +1,163 @@
+// Gallery /////////////////////////////////////////////////////////////////
+
 .gallery
 	display: block
-	// background: green
+	background: green
 	width: 100%
 
 
 
-// Gallery Stage
+	// Gallery Belt ///////////////////////////////////////////////////////
 
-.gallery-stage
-	background-image: url('../img/gallery/gallery_wood_bg.jpg')
-	background-position: center center
-	background-repeat: no-repeat
-	background-size: cover
-	padding: 50px 15px 0 15px
-
-	.gallery-stage-wrap
-		// background: red
-		max-width: 1300px
-		margin: 0 auto
-
-		.secondary-title
-			@include primary-title-base
-			padding-left: 65px
-
-			h1
-				@include secondary-title-h1
-
-			.secondary-left-squiggle, .secondary-right-squiggle
-				fill: $secondary-squiggles
+	.gallery-belt
+		background: pink
 
 
-		.close-gallery
-			float: right
-			background: lightblue
-			height: 50px
-			width: 50px
 
-	
-		.painting-slider
-			display: flex
-			justify-content: space-between
-			align-items: center
-			// background: salmon
-			// height: 830px
-			min-width: 80%
-			max-width: 800px
-			margin: 0 auto
+
+		// Gallery Stage //////////////////////////////////////////////////
+
+		.gallery-stage
+			// background: orange
+			background-image: url('../img/gallery/gallery_wood_bg.jpg')
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+			padding: 50px 15px 0 15px
+			+clearfix
+
+			// Stage Painting Title //////////////////////////////////////
+
+			.secondary-title
+				@include primary-title-base
+				padding-left: 65px
+
+				h1
+					@include secondary-title-h1
+
+				.secondary-left-squiggle, .secondary-right-squiggle
+					fill: $secondary-squiggles
+
+			// End Stage Painting Title //////////////////////////////////
 			
-			.left-arrow
-				background: blue
-				width: 53px
-				height: 60px
+			// Close Stage //////////////////////////////////////////////
 
-			.painting-full
-			.right-arrow
-				background: blue
-				width: 53px
-				height: 60px
-		
-		.painting-info
-			display: flex
-			align-items: center
-			flex-direction: column
-			padding-bottom: 45px
+			.close-stage
+				float: right
+				background: lightblue
+				height: 50px
+				width: 50px
 
-			h3
-				// background: pink
-				color: $text-color
-				font-family: $primary-font
-				font-weight: 600
-				font-size: 56px
-				text-transform: uppercase
-				margin: 0
-				padding: 0
-				border-bottom: 2px solid $text-color
-
-			h4
-				// background: pink
-				color: $text-color
-				font-family: $primary-font
-				font-weight: 400
-				font-size: 38px
-				letter-spacing: 2px
-				text-transform: uppercase
-
-				margin: 0
-				padding: 0
-
-
-// Gallery Thumbnails
-
-.gallery-thumb-wrap
-	// background: lightblue
-	height: 955px
-	padding: 50px 15px 0 15px
+				span,
+				span:after
+					position: relative
+					content: ""
+					display: block
+					height: 2px
+					width: 100%
+					background: violet
 
 
 
-	.primary-title
-		@include primary-title-base
+			// End Close Stage ///////////////////////////////////////////
 
-		h1
-			@include primary-title-h1
+			// Control & Content Container ///////////////////////////////
+			
+			.control-content-container
+				// background: violet
+				max-width: 800px
+				margin: 0 auto
+				display: flex
+				justify-content: space-between
+				align-items: center
 
-	
-	
-	.primary-left-squiggle, .primary-right-squiggle
-		fill: $primary-squiggles
+			// End Control & Content Container //////////////////////////////
+
+			// Controls /////////////////////////////////////////////////
+
+			.controls
+				@include controls
+
+			// End Controls //////////////////////////////////////////////
+
+			// Gallery Content ///////////////////////////////////////////
+
+			.stage-content-wrap
+				// background: red
+				max-width: 700px
+				text-align: center
 
 
+				.painting-full
+					padding: 0
+					margin: 0
+					// background: salmon
+
+
+				.painting-info
+					display: flex
+					align-items: center
+					flex-direction: column
+					padding-bottom: 45px
+
+					h3
+						// background: pink
+						color: $text-color
+						font-family: $primary-font
+						font-weight: 600
+						font-size: 56px
+						text-transform: uppercase
+						margin: 0
+						padding: 0
+						border-bottom: 2px solid $text-color
+
+					h4
+						// background: pink
+						color: $text-color
+						font-family: $primary-font
+						font-weight: 400
+						font-size: 38px
+						letter-spacing: 2px
+						text-transform: uppercase
+
+						margin: 0
+						padding: 0
+
+				// End Gallery Content ///////////////////////////////////////
+
+
+			// End Gallery Stage /////////////////////////////////////////////
+
+
+		// Gallery Thumb Area /////////////////////////////////////////////
+
+		.gallery-thumb-wrap
+			background: lightblue
+			max-width: 1300px
+			height: 955px
+			padding: 50px 15px 0 15px
+			margin: 0 auto
+
+
+
+			.primary-title
+				@include primary-title-base
+
+				h1
+					@include primary-title-h1
+
+
+
+				.primary-left-squiggle, .primary-right-squiggle
+					fill: $primary-squiggles
+
+		// Gallery Thumb Area /////////////////////////////////////////////
+
+
+	// End Gallery Belt ///////////////////////////////////////////////////
+
+
+// End Gallery ////////////////////////////////////////////////////////////
 
 
 

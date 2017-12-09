@@ -21,16 +21,14 @@ $secondary-squiggles: $text-color
 
 
 
-// Primary Titles
+// Titles
 @mixin primary-title-base
 	display: flex
 	justify-content: space-between
 	align-items: center
-	text-align: center
 	max-width: 450px
 	margin: 0 auto
 	padding-bottom: 45px
-	+clearfix
 		
 @mixin primary-title-h1
 	font-weight: 400
@@ -39,17 +37,6 @@ $secondary-squiggles: $text-color
 	margin: 0 0
 
 
-
-
-
-
-// Secondary Title
-@mixin secondary-title-base
-	text-align: center
-	max-width: 450px
-	margin: 0 auto
-	padding-bottom: 45px
-	+clearfix
 		
 @mixin secondary-title-h1
 	font-weight: 400
@@ -57,4 +44,14 @@ $secondary-squiggles: $text-color
 	font-family: $secondary-font
 	margin: 0 0
 	
-	
+
+// Controls
+
+@mixin controls
+	fill: $text-color
+	width: 53px
+	height: 60px
+	margin-top: -170px
+
+	&:hover
+		fill: $primary-color
