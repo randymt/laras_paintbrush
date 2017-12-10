@@ -1,0 +1,10 @@
+$(function() {
+	galleryBelt();
+});
+
+
+
+function galleryBelt() {
+
+	$('.')
+}

@@ -28,7 +28,7 @@ $secondary-squiggles: $text-color
 	align-items: center
 	max-width: 450px
 	margin: 0 auto
-	padding-bottom: 45px
+	padding: 45px 0
 		
 @mixin primary-title-h1
 	font-weight: 400
@@ -49,9 +49,11 @@ $secondary-squiggles: $text-color
 
 @mixin controls
 	fill: $text-color
-	width: 53px
-	height: 60px
 	margin-top: -170px
+	cursor: pointer
 
 	&:hover
 		fill: $primary-color
+
+	svg
+		max-width: 40px

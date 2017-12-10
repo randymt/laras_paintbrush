@@ -1,36 +1,39 @@
 // Gallery /////////////////////////////////////////////////////////////////
 
 .gallery
-	display: block
 	background: green
 	width: 100%
+	overflow: hidden
 
 
 
 	// Gallery Belt ///////////////////////////////////////////////////////
 
 	.gallery-belt
-		background: pink
-
-
+		background-image: url('../img/gallery/gallery_wood_bg.jpg')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		// background: pink
+		position: relative
+		// top: -1024px
+		width: 100%
+		margin: 0 auto
 
 
 		// Gallery Stage //////////////////////////////////////////////////
 
 		.gallery-stage
-			// background: orange
-			background-image: url('../img/gallery/gallery_wood_bg.jpg')
-			background-position: center center
-			background-repeat: no-repeat
-			background-size: cover
-			padding: 50px 15px 0 15px
 			+clearfix
+			// background: orange
+			max-width: 800px
+			margin: 0 auto
+			padding: 0 5px
 
 			// Stage Painting Title //////////////////////////////////////
 
 			.secondary-title
 				@include primary-title-base
-				padding-left: 65px
 
 				h1
 					@include secondary-title-h1
@@ -38,24 +41,53 @@
 				.secondary-left-squiggle, .secondary-right-squiggle
 					fill: $secondary-squiggles
 
+			@media (max-width: 500px)
+				.secondary-title
+					padding: 25px 0
+					max-width: 365px
+					
+					h1
+						font-size: 55px
+
+					svg
+						width: 90px 
 			// End Stage Painting Title //////////////////////////////////
 			
 			// Close Stage //////////////////////////////////////////////
 
 			.close-stage
+				border: 2px solid $text-color
+				border-radius: 100px
 				float: right
-				background: lightblue
-				height: 50px
-				width: 50px
+				height: 35px
+				width: 35px
+				cursor: pointer
+				padding: 5px
+				margin: 0 10px 15px 0
 
-				span,
+				span
+					position: relative
+					content: ""
+					display: block
+					height: 2px
+					width: 100%
+					background: $text-color
+					transform-origin: center
+					transform: rotate(45deg)
+					top: 17px
+
 				span:after
 					position: relative
 					content: ""
 					display: block
 					height: 2px
 					width: 100%
-					background: violet
+					background: $text-color
+					transform-origin: center
+					transform: rotate(90deg)
+
+				&:hover
+					opacity: .5
 
 
 
@@ -65,14 +97,14 @@
 			
 			.control-content-container
 				// background: violet
-				max-width: 800px
+				width: 100%
 				margin: 0 auto
 				display: flex
 				justify-content: space-between
 				align-items: center
 
 			// End Control & Content Container //////////////////////////////
-
+			
 			// Controls /////////////////////////////////////////////////
 
 			.controls
@@ -91,6 +123,9 @@
 				.painting-full
 					padding: 0
 					margin: 0
+					width: 100%
+					max-width: 551px
+
 					// background: salmon
 
 
@@ -98,7 +133,6 @@
 					display: flex
 					align-items: center
 					flex-direction: column
-					padding-bottom: 45px
 
 					h3
 						// background: pink
@@ -123,6 +157,11 @@
 						margin: 0
 						padding: 0
 
+				@media (max-width: 500px)
+					.painting-info
+						
+						h3
+							font-size: 40px
 				// End Gallery Content ///////////////////////////////////////
 
 
@@ -131,25 +170,28 @@
 
 		// Gallery Thumb Area /////////////////////////////////////////////
 
-		.gallery-thumb-wrap
-			background: lightblue
-			max-width: 1300px
-			height: 955px
-			padding: 50px 15px 0 15px
-			margin: 0 auto
+		// .gallery-thumb-wrap
+		// 	background: lightblue
+		// 	max-width: 1300px
+		// 	height: 955px
+		// 	padding: 50px 15px 0 15px
+		// 	margin: 0 auto
 
 
 
-			.primary-title
-				@include primary-title-base
+		// 	.primary-title
+		// 		@include primary-title-base
 
-				h1
-					@include primary-title-h1
+		// 		h1
+		// 			@include primary-title-h1
 
 
 
-				.primary-left-squiggle, .primary-right-squiggle
-					fill: $primary-squiggles
+		// 		.primary-left-squiggle, .primary-right-squiggle
+		// 			fill: $primary-squiggles
+
+		// 	.thumb-unit
+		// 		width
 
 		// Gallery Thumb Area /////////////////////////////////////////////
 
