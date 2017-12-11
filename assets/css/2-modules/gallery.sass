@@ -3,22 +3,22 @@
 .gallery
 	background: green
 	width: 100%
-	overflow: hidden
 
 
 
-	// Gallery Belt ///////////////////////////////////////////////////////
 
-	.gallery-belt
+
+	// Gallery Stage Container //////////////////////////////////////////////////
+
+	.gallery-stage-container
 		background-image: url('../img/gallery/gallery_wood_bg.jpg')
-		background-position: center center
+		background-position: top center
 		background-repeat: no-repeat
 		background-size: cover
-		// background: pink
-		position: relative
-		// top: -1024px
-		width: 100%
-		margin: 0 auto
+		max-height: 0px
+		opacity: 0
+		display: none
+		transition: all 2.0s ease-in-out
 
 
 		// Gallery Stage //////////////////////////////////////////////////
@@ -55,7 +55,7 @@
 			
 			// Close Stage //////////////////////////////////////////////
 
-			.close-stage
+			.stage-close-button
 				border: 2px solid $text-color
 				border-radius: 100px
 				float: right
@@ -168,32 +168,48 @@
 			// End Gallery Stage /////////////////////////////////////////////
 
 
-		// Gallery Thumb Area /////////////////////////////////////////////
 
-		// .gallery-thumb-wrap
-		// 	background: lightblue
-		// 	max-width: 1300px
-		// 	height: 955px
-		// 	padding: 50px 15px 0 15px
-		// 	margin: 0 auto
+	.stage-open
+		display: block
+		max-height: 1038px
+		opacity: 1
 
 
 
-		// 	.primary-title
-		// 		@include primary-title-base
+	// Gallery Thumb Area /////////////////////////////////////////////
 
-		// 		h1
-		// 			@include primary-title-h1
+	.gallery-thumb-wrap
+		background: lightblue
+		max-width: 1300px
+		height: 955px
+		padding: 50px 15px 0 15px
+		margin: 0 auto
 
 
 
-		// 		.primary-left-squiggle, .primary-right-squiggle
-		// 			fill: $primary-squiggles
+		.primary-title
+			@include primary-title-base
 
-		// 	.thumb-unit
-		// 		width
+			h1
+				@include primary-title-h1
 
-		// Gallery Thumb Area /////////////////////////////////////////////
+
+
+			.primary-left-squiggle, .primary-right-squiggle
+				fill: $primary-squiggles
+
+		.thumb-unit
+			display: block
+			background: green
+			width: 50px
+			height: 50px
+
+		.thumb-unit:hover
+			background: pink
+			cursor: pointer
+
+
+	// Gallery Thumb Area /////////////////////////////////////////////
 
 
 	// End Gallery Belt ///////////////////////////////////////////////////

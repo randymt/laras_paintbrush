@@ -1,21 +1,24 @@
-section.gallery
-	.gallery-belt
+section.gallery#gallery
+	.gallery-stage-container
 		.gallery-stage
 			.secondary-title
-					{% include icons/icon-left-squiggle2.html %}
+				
+				{% include icons/icon-left-squiggle2.html %}
+				
+				h1 Paintings
+				
+				{% include icons/icon-right-squiggle2.html %}
 
-					h1 Paintings
-
-					{% include icons/icon-right-squiggle2.html %}
 
 			//- Control & Content Container
 			.control-content-container
 				a(href="#" class="controls") 
+					
 					{% include icons/icon-left-control.html %}
 
 				
 				.stage-content-wrap
-					img(src="assets/img/gallery/paintings/randiz/randiz-full.png", alt="Painting Randiz" class="painting-full")
+					img(src="assets/img/gallery/paintings/randiz/randiz-full.png", alt="").painting-full
 					.painting-info
 						.painting-title
 							h3 randiz
@@ -23,20 +26,22 @@ section.gallery
 							h4 8 x 8
 
 				a(href="#" class="controls")
+
 					{% include icons/icon-right-control.html %}
 
-			.close-stage
+			.stage-close-button.stage-toggle
 				span
 
 
-		//- .gallery-thumb-wrap
+	.gallery-thumb-wrap
+		
+		.primary-title
+		
+			{% include icons/icon-left-squiggle.html %}
+
+			h1 Paintings
 			
-		//- 	.primary-title
-		//- 		{% include icons/icon-left-squiggle.html %}
+			{% include icons/icon-right-squiggle.html %}			
+			
 
-		//- 		h1 Paintings
-				
-		//- 		{% include icons/icon-right-squiggle.html %}
-				
-
-		//- 	.thumb-unit
+		a(href="#gallery" class="thumb-unit stage-toggle")

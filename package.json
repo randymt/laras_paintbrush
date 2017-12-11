@@ -31,6 +31,7 @@
   "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
   "dependencies": {
     "auto-prefixer": "^0.4.2",
+    "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
     "normalize.scss": "^0.1.0"
   }

@@ -619,25 +619,25 @@ nav.mobile-nav {
 
 .gallery {
   background: green;
-  width: 100%;
-  overflow: hidden; }
-  .gallery .gallery-belt {
+  width: 100%; }
+  .gallery .gallery-stage-container {
     background-image: url("../img/gallery/gallery_wood_bg.jpg");
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    width: 100%;
-    margin: 0 auto; }
-    .gallery .gallery-belt .gallery-stage {
+    max-height: 0px;
+    opacity: 0;
+    display: none;
+    transition: all 2.0s ease-in-out; }
+    .gallery .gallery-stage-container .gallery-stage {
       max-width: 800px;
       margin: 0 auto;
       padding: 0 5px; }
-      .gallery .gallery-belt .gallery-stage::after {
+      .gallery .gallery-stage-container .gallery-stage::after {
         clear: both;
         content: "";
         display: table; }
-      .gallery .gallery-belt .gallery-stage .secondary-title {
+      .gallery .gallery-stage-container .gallery-stage .secondary-title {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: justify;
@@ -647,22 +647,22 @@ nav.mobile-nav {
         max-width: 450px;
         margin: 0 auto;
         padding: 45px 0; }
-        .gallery .gallery-belt .gallery-stage .secondary-title h1 {
+        .gallery .gallery-stage-container .gallery-stage .secondary-title h1 {
           font-weight: 400;
           color: #f3f3f3;
           font-family: Vibur, sans serif;
           margin: 0 0; }
-        .gallery .gallery-belt .gallery-stage .secondary-title .secondary-left-squiggle, .gallery .gallery-belt .gallery-stage .secondary-title .secondary-right-squiggle {
+        .gallery .gallery-stage-container .gallery-stage .secondary-title .secondary-left-squiggle, .gallery .gallery-stage-container .gallery-stage .secondary-title .secondary-right-squiggle {
           fill: #f3f3f3; }
       @media (max-width: 500px) {
-        .gallery .gallery-belt .gallery-stage .secondary-title {
+        .gallery .gallery-stage-container .gallery-stage .secondary-title {
           padding: 25px 0;
           max-width: 365px; }
-          .gallery .gallery-belt .gallery-stage .secondary-title h1 {
+          .gallery .gallery-stage-container .gallery-stage .secondary-title h1 {
             font-size: 55px; }
-          .gallery .gallery-belt .gallery-stage .secondary-title svg {
+          .gallery .gallery-stage-container .gallery-stage .secondary-title svg {
             width: 90px; } }
-      .gallery .gallery-belt .gallery-stage .close-stage {
+      .gallery .gallery-stage-container .gallery-stage .stage-close-button {
         border: 2px solid #f3f3f3;
         border-radius: 100px;
         float: right;
@@ -671,7 +671,7 @@ nav.mobile-nav {
         cursor: pointer;
         padding: 5px;
         margin: 0 10px 15px 0; }
-        .gallery .gallery-belt .gallery-stage .close-stage span {
+        .gallery .gallery-stage-container .gallery-stage .stage-close-button span {
           position: relative;
           content: "";
           display: block;
@@ -683,7 +683,7 @@ nav.mobile-nav {
           -webkit-transform: rotate(45deg);
                   transform: rotate(45deg);
           top: 17px; }
-        .gallery .gallery-belt .gallery-stage .close-stage span:after {
+        .gallery .gallery-stage-container .gallery-stage .stage-close-button span:after {
           position: relative;
           content: "";
           display: block;
@@ -694,9 +694,9 @@ nav.mobile-nav {
                   transform-origin: center;
           -webkit-transform: rotate(90deg);
                   transform: rotate(90deg); }
-        .gallery .gallery-belt .gallery-stage .close-stage:hover {
+        .gallery .gallery-stage-container .gallery-stage .stage-close-button:hover {
           opacity: .5; }
-      .gallery .gallery-belt .gallery-stage .control-content-container {
+      .gallery .gallery-stage-container .gallery-stage .control-content-container {
         width: 100%;
         margin: 0 auto;
         display: -ms-flexbox;
@@ -705,30 +705,30 @@ nav.mobile-nav {
             justify-content: space-between;
         -ms-flex-align: center;
             align-items: center; }
-      .gallery .gallery-belt .gallery-stage .controls {
+      .gallery .gallery-stage-container .gallery-stage .controls {
         fill: #f3f3f3;
         margin-top: -170px;
         cursor: pointer; }
-        .gallery .gallery-belt .gallery-stage .controls:hover {
+        .gallery .gallery-stage-container .gallery-stage .controls:hover {
           fill: #ff4e3e; }
-        .gallery .gallery-belt .gallery-stage .controls svg {
+        .gallery .gallery-stage-container .gallery-stage .controls svg {
           max-width: 40px; }
-      .gallery .gallery-belt .gallery-stage .stage-content-wrap {
+      .gallery .gallery-stage-container .gallery-stage .stage-content-wrap {
         max-width: 700px;
         text-align: center; }
-        .gallery .gallery-belt .gallery-stage .stage-content-wrap .painting-full {
+        .gallery .gallery-stage-container .gallery-stage .stage-content-wrap .painting-full {
           padding: 0;
           margin: 0;
           width: 100%;
           max-width: 551px; }
-        .gallery .gallery-belt .gallery-stage .stage-content-wrap .painting-info {
+        .gallery .gallery-stage-container .gallery-stage .stage-content-wrap .painting-info {
           display: -ms-flexbox;
           display: flex;
           -ms-flex-align: center;
               align-items: center;
           -ms-flex-direction: column;
               flex-direction: column; }
-          .gallery .gallery-belt .gallery-stage .stage-content-wrap .painting-info h3 {
+          .gallery .gallery-stage-container .gallery-stage .stage-content-wrap .painting-info h3 {
             color: #f3f3f3;
             font-family: Open sans, sans serif;
             font-weight: 600;
@@ -737,7 +737,7 @@ nav.mobile-nav {
             margin: 0;
             padding: 0;
             border-bottom: 2px solid #f3f3f3; }
-          .gallery .gallery-belt .gallery-stage .stage-content-wrap .painting-info h4 {
+          .gallery .gallery-stage-container .gallery-stage .stage-content-wrap .painting-info h4 {
             color: #f3f3f3;
             font-family: Open sans, sans serif;
             font-weight: 400;
@@ -747,5 +747,44 @@ nav.mobile-nav {
             margin: 0;
             padding: 0; }
         @media (max-width: 500px) {
-          .gallery .gallery-belt .gallery-stage .stage-content-wrap .painting-info h3 {
+          .gallery .gallery-stage-container .gallery-stage .stage-content-wrap .painting-info h3 {
             font-size: 40px; } }
+  .gallery .stage-open {
+    display: block;
+    max-height: 1038px;
+    opacity: 1; }
+  .gallery .gallery-thumb-wrap {
+    background: lightblue;
+    max-width: 1300px;
+    height: 955px;
+    padding: 50px 15px 0 15px;
+    margin: 0 auto; }
+    .gallery .gallery-thumb-wrap .primary-title {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-align: center;
+          align-items: center;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 45px 0; }
+      .gallery .gallery-thumb-wrap .primary-title h1 {
+        font-weight: 400;
+        color: #8a4384;
+        font-family: Vibur, sans serif;
+        margin: 0 0; }
+      .gallery .gallery-thumb-wrap .primary-title .primary-left-squiggle, .gallery .gallery-thumb-wrap .primary-title .primary-right-squiggle {
+        fill: #343434; }
+    .gallery .gallery-thumb-wrap .thumb-unit {
+      display: block;
+      background: green;
+      width: 50px;
+      height: 50px; }
+    .gallery .gallery-thumb-wrap .thumb-unit:hover {
+      background: pink;
+      cursor: pointer; }
+
+.about {
+  background: gray;
+  height: 1700px; }
