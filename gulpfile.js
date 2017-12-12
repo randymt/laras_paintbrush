@@ -3,7 +3,9 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var jade        = require('gulp-jade')
+var jade        = require('gulp-jade');
+var uglify      = require('gulp-uglify');
+var pump        = require('pump');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -63,6 +65,7 @@ gulp.task('sass', function () {
 });
 
 
+
 /*
 * Autoprefixer
 */
@@ -86,7 +89,9 @@ gulp.task('jade', function(){
         .pipe(jade())
         .pipe(gulp.dest('_includes'));
 
-    });
+});
+
+    
 
 
 
@@ -96,7 +101,7 @@ gulp.task('jade', function(){
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', 'painting-loads/*.html'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
 

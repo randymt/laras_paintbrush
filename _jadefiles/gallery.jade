@@ -18,12 +18,8 @@ section.gallery#gallery
 
 				
 				.stage-content-wrap
-					img(src="assets/img/gallery/paintings/randiz/randiz-full.png", alt="").painting-full
-					.painting-info
-						.painting-title
-							h3 randiz
-						.painting-dim
-							h4 8 x 8
+					.painting-load
+						
 
 				a(href="#" class="controls")
 
@@ -43,5 +39,11 @@ section.gallery#gallery
 			
 			{% include icons/icon-right-squiggle.html %}			
 			
+		{% for painting in site.data.settings.paintings %}
 
-		a(href="#gallery" class="thumb-unit stage-toggle")
+		a(href="#gallery" data-folder="{{ painting.folder }}" class="thumb-unit stage-toggle" style="background-image:url(/assets/img/gallery/paintings/{{ painting.folder }}/thumb.jpg);")
+			.thumb-overlay
+				strong {{ painting.name }}
+
+		{% endfor %}
+

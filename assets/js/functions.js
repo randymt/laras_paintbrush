@@ -1,17 +1,32 @@
-
-// Smooth Scrolling
-$(document).ready(function coolScroll() {
-	
-	$("#gallery-link").click(function() {
-		$path=$("#gallery").offset().top;
-			$('body').animate({scrollTop:$path},1000);
-	});
-
-	console.log('coolScroll');
+$(function() {
+	stageToggle();
+	workLoad();
 });
 
-$(function(){
+
+
+
+
+function stageToggle() {
   $('.stage-toggle').on('click', function() {
      $('.gallery-stage-container').toggleClass('stage-open');
+     $('.primary-title').toggleClass('stage-open');
    });
-});
+}
+
+
+function workLoad () {
+
+	$.ajaxSetup({ cache: false });
+
+	$('.thumb-unit').click(function () {
+		
+		var $this = $(this),
+			newFolder = $this.data('folder'),
+			spinner = '<div class="loader">Loading...</div>',
+			newHTML = 'painting-loads/'+ newFolder +'.html';
+
+		$('.painting-load').html(spinner).load(newHTML);
+
+	});
+}

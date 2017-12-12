@@ -1,7 +1,7 @@
 // Gallery /////////////////////////////////////////////////////////////////
 
 .gallery
-	background: green
+	// background: green
 	width: 100%
 
 
@@ -28,7 +28,7 @@
 			// background: orange
 			max-width: 800px
 			margin: 0 auto
-			padding: 0 5px
+			padding: 50px 5px
 
 			// Stage Painting Title //////////////////////////////////////
 
@@ -44,13 +44,13 @@
 			@media (max-width: 500px)
 				.secondary-title
 					padding: 25px 0
-					max-width: 365px
+					max-width: 300px
 					
 					h1
-						font-size: 55px
+						font-size: 45px
 
 					svg
-						width: 90px 
+						width: 75px 
 			// End Stage Painting Title //////////////////////////////////
 			
 			// Close Stage //////////////////////////////////////////////
@@ -179,11 +179,11 @@
 	// Gallery Thumb Area /////////////////////////////////////////////
 
 	.gallery-thumb-wrap
-		background: lightblue
-		max-width: 1300px
-		height: 955px
-		padding: 50px 15px 0 15px
+		// background: lightblue
+		max-width: 900px
+		padding: 50px 15px 80px 15px
 		margin: 0 auto
+		+clearfix
 
 
 
@@ -194,25 +194,83 @@
 				@include primary-title-h1
 
 
-
 			.primary-left-squiggle, .primary-right-squiggle
 				fill: $primary-squiggles
 
-		.thumb-unit
-			display: block
-			background: green
-			width: 50px
-			height: 50px
+		@media (max-width: 500px)
+				.primary-title
+					padding: 25px 0
+					max-width: 300px
+					
+					h1
+						font-size: 45px
 
-		.thumb-unit:hover
-			background: pink
-			cursor: pointer
+					svg
+						width: 75px 
+		.thumb-unit
+			// background-image: url("http://fillmurray.com/400/300")
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+
+			float: left
+			width: 33%
+			display: block
+
+			position: relative
+			padding-top: 20%
+			overflow: hidden
+			
+			perspective: 300px
+
+
+			.thumb-overlay
+				position: absolute
+				top: -100%
+				right: 0px
+				left: 0px
+				height: 100%;
+				background: rgba(250, 128, 114, .75)
+				transition: all .3s ease
+				text-align: center
+				display: flex
+				align-items: center
+				justify-content: space-around
+				transform: rotate(-180deg)
+				transform-origin: top left
+				opacity: 0;
+
+			strong, p
+				display: block
+				padding: 0px 20px
+				color: $text-color
+				font-size: 24px
+				text-transform: uppercase
+
+
+			&:hover .thumb-overlay
+				position: absolute
+				top: 0%
+				transform: rotateY(0deg)
+				transform: size(50px)
+				opacity: 1;
+
+		
+		
+		@media (max-width: 768px)
+			.thumb-unit
+				width: 50%
+				padding-top: 30%
+
+		.stage-open-title
+			padding-top: 50px
+			display: none
+			opacity: 0
 
 
 	// Gallery Thumb Area /////////////////////////////////////////////
 
 
-	// End Gallery Belt ///////////////////////////////////////////////////
 
 
 // End Gallery ////////////////////////////////////////////////////////////

@@ -1,0 +1,22 @@
+#-------------------------------
+# General Site Settings
+
+title: Lara's Paintbrush
+description: Painting cool things
+email: laraspaintbrush@gmail.com
+
+
+#------------------------
+# Paintings
+
+
+paintings:
+- {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'Mountains', folder: 'mountains', file: 'thumb.jpg'}
+- {name: 'Mr. Envy', folder: 'mrenvy', file: 'thumb.jpg'}
+- {name: 'something', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'stain', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'Raz', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
