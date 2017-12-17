@@ -15,10 +15,10 @@
 		background-position: top center
 		background-repeat: no-repeat
 		background-size: cover
-		max-height: 0px
-		opacity: 0
-		display: none
-		transition: all 2.0s ease-in-out
+		max-height: 0
+		overflow: hidden
+		transition: all .5s ease-in-out
+		
 
 
 		// Gallery Stage //////////////////////////////////////////////////
@@ -64,6 +64,8 @@
 				cursor: pointer
 				padding: 5px
 				margin: 0 10px 15px 0
+				opacity: .75
+				transition: all .5s ease
 
 				span
 					position: relative
@@ -87,7 +89,8 @@
 					transform: rotate(90deg)
 
 				&:hover
-					opacity: .5
+					opacity: 1
+					transform: rotate(90deg)
 
 
 
@@ -99,9 +102,7 @@
 				// background: violet
 				width: 100%
 				margin: 0 auto
-				display: flex
-				justify-content: space-between
-				align-items: center
+				
 
 			// End Control & Content Container //////////////////////////////
 			
@@ -117,6 +118,7 @@
 			.stage-content-wrap
 				// background: red
 				max-width: 700px
+				margin: 0 auto
 				text-align: center
 
 
@@ -124,7 +126,7 @@
 					padding: 0
 					margin: 0
 					width: 100%
-					max-width: 551px
+					max-width: 510px
 
 					// background: salmon
 
@@ -170,9 +172,8 @@
 
 
 	.stage-open
-		display: block
 		max-height: 1038px
-		opacity: 1
+		
 
 
 
@@ -194,7 +195,8 @@
 				@include primary-title-h1
 
 
-			.primary-left-squiggle, .primary-right-squiggle
+			.primary-left-squiggle,
+			.primary-right-squiggle
 				fill: $primary-squiggles
 
 		@media (max-width: 500px)
@@ -206,7 +208,12 @@
 						font-size: 45px
 
 					svg
-						width: 75px 
+						width: 75px
+
+
+		.title-off
+			display: none
+			
 		.thumb-unit
 			// background-image: url("http://fillmurray.com/400/300")
 			background-position: center center
@@ -230,8 +237,9 @@
 				right: 0px
 				left: 0px
 				height: 100%;
-				background: rgba(250, 128, 114, .75)
-				transition: all .3s ease
+				background: rgba(255, 68, 62, 1)
+
+				transition: all .5s ease-in-out
 				text-align: center
 				display: flex
 				align-items: center
@@ -247,8 +255,10 @@
 				font-size: 24px
 				text-transform: uppercase
 
+		
 
 			&:hover .thumb-overlay
+				background: rgba(138, 67, 132, .75)
 				position: absolute
 				top: 0%
 				transform: rotateY(0deg)
@@ -261,6 +271,9 @@
 			.thumb-unit
 				width: 50%
 				padding-top: 30%
+
+			:last-child
+				width: 100%
 
 		.stage-open-title
 			padding-top: 50px

@@ -14,9 +14,9 @@ paintings:
 - {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
 - {name: 'Mountains', folder: 'mountains', file: 'thumb.jpg'}
 - {name: 'Mr. Envy', folder: 'mrenvy', file: 'thumb.jpg'}
-- {name: 'something', folder: 'randiz', file: 'thumb.jpg'}
-- {name: 'stain', folder: 'randiz', file: 'thumb.jpg'}
-- {name: 'Raz', folder: 'randiz', file: 'thumb.jpg'}
-- {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
-- {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}
+- {name: 'Moon Flower', folder: 'moonflower', file: 'thumb.jpg'}
+- {name: 'Diamond Tower', folder: 'diamondtower', file: 'thumb.jpg'}
+- {name: 'Colorful Disaster', folder: 'colorfuldisaster', file: 'thumb.jpg'}
+- {name: 'Orange Flower', folder: 'orangeflower', file: 'thumb.jpg'}
+- {name: 'Purple Flower', folder: 'purpleflower', file: 'thumb.jpg'}
 - {name: 'Randiz', folder: 'randiz', file: 'thumb.jpg'}

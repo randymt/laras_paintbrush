@@ -1,31 +1,20 @@
 section.gallery#gallery
 	.gallery-stage-container
 		.gallery-stage
-			.secondary-title
-				
-				{% include icons/icon-left-squiggle2.html %}
-				
-				h1 Paintings
-				
-				{% include icons/icon-right-squiggle2.html %}
+			
 
 
 			//- Control & Content Container
 			.control-content-container
-				a(href="#" class="controls") 
-					
-					{% include icons/icon-left-control.html %}
+
 
 				
 				.stage-content-wrap
 					.painting-load
-						
 
-				a(href="#" class="controls")
 
-					{% include icons/icon-right-control.html %}
-
-			.stage-close-button.stage-toggle
+			
+			a(href="#gallery" class="stage-close-button stage-toggle")
 				span
 
 
@@ -41,7 +30,7 @@ section.gallery#gallery
 			
 		{% for painting in site.data.settings.paintings %}
 
-		a(href="#gallery" data-folder="{{ painting.folder }}" class="thumb-unit stage-toggle" style="background-image:url(/assets/img/gallery/paintings/{{ painting.folder }}/thumb.jpg);")
+		a(href="#gallery" data-folder="{{ painting.folder }}" class="thumb-unit stage-toggle show-full" style="background-image:url(/assets/img/gallery/paintings/{{ painting.folder }}/thumb.jpg);")
 			.thumb-overlay
 				strong {{ painting.name }}
 

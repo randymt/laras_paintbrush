@@ -78,11 +78,14 @@ nav.main-nav
 
 nav.mobile-nav
 	padding: 0 40px
-	display: none
+	display: flex
 	background: white
 	transform: translateY(-48px)
-	transition: all .2s ease-in-out
 	justify-content: space-between
+	max-height: 0
+	transition: all .5s ease
+	overflow: hidden
+
 
 	a
 		font-family: $primary-font
@@ -150,7 +153,8 @@ nav.mobile-nav
 
 
 	nav.mobile-nav.is-open
-		display: flex
+		max-height: 48px
+		// display: flex
 		transform: translateY(0)
 
 

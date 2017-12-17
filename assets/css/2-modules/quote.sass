@@ -1,4 +1,49 @@
 section.quote
-	background: $primary-color
-	background: linear-gradient(164deg, $primary-color -14%, $accent-color 106%)
-	height: 350px
+	background-image: url(../img/quote/doodles.png)
+	background-color: $accent-color
+	// background: linear-gradient(164deg, $primary-color -14%, $accent-color 106%)
+	background-blend-mode: multiply
+	padding: 0 0 25px 0
+	transition: all .5s ease-in-out
+
+	&:hover
+		background-color: $primary-color
+
+
+	
+	.quote-wrap
+		width: 90%
+		max-width: 1200px
+		margin: 0 auto
+		padding: 70px 0 45px 0
+
+		
+		h1
+			line-height: 80px
+			padding: 0 
+			margin: 0
+			font-size: 3.5em
+			font-weight: 400
+			font-family: $secondary-font
+			color: $text-color
+			text-align: center
+			display: block
+		
+		h1.artist-quote
+			opacity:.5
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
