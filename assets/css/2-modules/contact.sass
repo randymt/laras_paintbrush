@@ -1,0 +1,89 @@
+section.contact
+	// background: $accent-color
+	background: url(../../assets/img/contact/contact_bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	height: 1057px
+
+	
+
+	.contact-wrap
+		// border: solid 1px limegreen
+		max-width: 1300px
+		margin: 0 auto
+		+clearfix
+
+	
+		.contact-form-wrap
+			float: right
+			// background: pink
+			width: 758px
+			margin-top: 150px
+
+
+			.secondary-title
+				@include primary-title-base
+
+
+				h1
+					font-weight: 400
+					color: $text-color
+					font-family: $secondary-font
+
+				svg
+					fill: $secondary-squiggles
+
+			@media (max-width: 500px)
+				.secondary-title
+					padding: 25px 0
+					max-width: 300px
+					
+					h1
+						font-size: 45px
+
+					svg
+						width: 75px
+
+
+			.say-hello
+				// background: pink
+				
+				input::placeholder, textarea::placeholder
+					font-family: $primary-font
+					color: $text-color
+					text-transform: uppercase
+					opacity: .25
+
+
+				input
+					border: none
+					font-family: $primary-font
+					color: $text-color
+					font-weight: 600
+					font-size: 2em
+					padding: 20px 0 20px 20px
+					width: 738px
+					background: rgba(138, 67, 132, .75)
+					border-radius: 10px
+					margin-bottom: 15px
+
+				textarea
+					border: none
+					font-family: $primary-font
+					color: $text-color
+					font-weight: 600
+					font-size: 2em
+					padding: 20px 0 20px 20px
+					background: rgba(138, 67, 132, .75)
+					border-radius: 10px
+					margin-bottom: 15px
+					height: 300px
+					width: 738px
+					max-width: 738px
+
+
+
+
+
+
+

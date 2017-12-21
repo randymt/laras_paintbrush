@@ -690,31 +690,6 @@ nav.mobile-nav {
         clear: both;
         content: "";
         display: table; }
-      .gallery .gallery-stage-container .gallery-stage .secondary-title {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-        -ms-flex-align: center;
-            align-items: center;
-        max-width: 450px;
-        margin: 0 auto;
-        padding: 0 0 50px 0; }
-        .gallery .gallery-stage-container .gallery-stage .secondary-title h1 {
-          font-weight: 400;
-          color: #f3f3f3;
-          font-family: Vibur, sans serif;
-          margin: 0 0; }
-        .gallery .gallery-stage-container .gallery-stage .secondary-title .secondary-left-squiggle, .gallery .gallery-stage-container .gallery-stage .secondary-title .secondary-right-squiggle {
-          fill: #f3f3f3; }
-      @media (max-width: 500px) {
-        .gallery .gallery-stage-container .gallery-stage .secondary-title {
-          padding: 25px 0;
-          max-width: 300px; }
-          .gallery .gallery-stage-container .gallery-stage .secondary-title h1 {
-            font-size: 45px; }
-          .gallery .gallery-stage-container .gallery-stage .secondary-title svg {
-            width: 75px; } }
       .gallery .gallery-stage-container .gallery-stage .stage-close-button {
         border: 2px solid #f3f3f3;
         border-radius: 100px;
@@ -818,7 +793,7 @@ nav.mobile-nav {
           justify-content: space-between;
       -ms-flex-align: center;
           align-items: center;
-      max-width: 450px;
+      max-width: 490px;
       margin: 0 auto;
       padding: 0 0 50px 0; }
       .gallery .gallery-thumb-wrap .primary-title h1 {
@@ -933,7 +908,7 @@ section.quote {
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    max-width: 450px;
+    max-width: 490px;
     margin: 0 auto;
     padding: 0 0 50px 0;
     margin-top: 27px; }
@@ -942,6 +917,14 @@ section.quote {
       color: #8a4384;
       font-family: Vibur, sans serif;
       margin: 0 0; }
+  @media (max-width: 500px) {
+    .about .primary-title {
+      padding: 25px 0;
+      max-width: 300px; }
+      .about .primary-title h1 {
+        font-size: 45px; }
+      .about .primary-title svg {
+        width: 75px; } }
   .about .about-wrap {
     max-width: 900px;
     margin: 40px auto; }
@@ -950,8 +933,8 @@ section.quote {
       background-repeat: no-repeat;
       background-size: cover;
       background-position-y: -40px;
-      height: 498px;
-      width: 498px;
+      height: 450px;
+      width: 450px;
       margin: 0 auto 80px auto;
       border-radius: 50%;
       border: solid 5px #8a4384; }
@@ -968,4 +951,110 @@ section.quote {
     .about .about-wrap .snail {
       display: block;
       fill: #8a4384;
-      margin: 45px 0 0 100px; }
+      transition: all 5.0s ease;
+      margin-left: 400px; }
+    .about .about-wrap .snail:hover {
+      fill: #ff4e3e;
+      margin-left: 0; }
+    @media (max-width: 800px) {
+      .about .about-wrap .avatar {
+        height: 300px;
+        width: 300px; }
+      .about .about-wrap .snail {
+        margin: 0 auto; } }
+
+section.contact {
+  background: url(../../assets/img/contact/contact_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1057px; }
+  section.contact .contact-wrap {
+    max-width: 1300px;
+    margin: 0 auto; }
+    section.contact .contact-wrap::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section.contact .contact-wrap .contact-form-wrap {
+      float: right;
+      width: 758px;
+      margin-top: 150px; }
+      section.contact .contact-wrap .contact-form-wrap .secondary-title {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        -ms-flex-align: center;
+            align-items: center;
+        max-width: 490px;
+        margin: 0 auto;
+        padding: 0 0 50px 0; }
+        section.contact .contact-wrap .contact-form-wrap .secondary-title h1 {
+          font-weight: 400;
+          color: #f3f3f3;
+          font-family: Vibur, sans serif; }
+        section.contact .contact-wrap .contact-form-wrap .secondary-title svg {
+          fill: #f3f3f3; }
+      @media (max-width: 500px) {
+        section.contact .contact-wrap .contact-form-wrap .secondary-title {
+          padding: 25px 0;
+          max-width: 300px; }
+          section.contact .contact-wrap .contact-form-wrap .secondary-title h1 {
+            font-size: 45px; }
+          section.contact .contact-wrap .contact-form-wrap .secondary-title svg {
+            width: 75px; } }
+      section.contact .contact-wrap .contact-form-wrap .say-hello input::-webkit-input-placeholder, section.contact .contact-wrap .contact-form-wrap .say-hello textarea::-webkit-input-placeholder {
+        font-family: "Open sans", sans serif;
+        color: #f3f3f3;
+        text-transform: uppercase;
+        opacity: .25; }
+      section.contact .contact-wrap .contact-form-wrap .say-hello input::-moz-placeholder, section.contact .contact-wrap .contact-form-wrap .say-hello textarea::-moz-placeholder {
+        font-family: "Open sans", sans serif;
+        color: #f3f3f3;
+        text-transform: uppercase;
+        opacity: .25; }
+      section.contact .contact-wrap .contact-form-wrap .say-hello input:-ms-input-placeholder, section.contact .contact-wrap .contact-form-wrap .say-hello textarea:-ms-input-placeholder {
+        font-family: "Open sans", sans serif;
+        color: #f3f3f3;
+        text-transform: uppercase;
+        opacity: .25; }
+      section.contact .contact-wrap .contact-form-wrap .say-hello input::placeholder, section.contact .contact-wrap .contact-form-wrap .say-hello textarea::placeholder {
+        font-family: "Open sans", sans serif;
+        color: #f3f3f3;
+        text-transform: uppercase;
+        opacity: .25; }
+      section.contact .contact-wrap .contact-form-wrap .say-hello input {
+        border: none;
+        font-family: "Open sans", sans serif;
+        color: #f3f3f3;
+        font-weight: 600;
+        font-size: 2em;
+        padding: 20px 0 20px 20px;
+        width: 738px;
+        background: rgba(138, 67, 132, 0.75);
+        border-radius: 10px;
+        margin-bottom: 15px; }
+      section.contact .contact-wrap .contact-form-wrap .say-hello textarea {
+        border: none;
+        font-family: "Open sans", sans serif;
+        color: #f3f3f3;
+        font-weight: 600;
+        font-size: 2em;
+        padding: 20px 0 20px 20px;
+        background: rgba(138, 67, 132, 0.75);
+        border-radius: 10px;
+        margin-bottom: 15px;
+        height: 300px;
+        width: 738px;
+        max-width: 738px; }
+
+footer {
+  background: #704992;
+  height: 150px; }
+  footer .footer-wrap {
+    padding: 65px;
+    text-align: center; }
+    footer .footer-wrap strong {
+      font-family: "Open sans", sans serif;
+      font-weight: 600;
+      letter-spacing: 2px; }
